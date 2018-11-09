@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F2F2AA141374EE438F87302 /* libPods-Douyi-clone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D46D8A42EFF89FFB305F6A92 /* libPods-Douyi-clone.a */; };
 		CF4BFE8E2195599E00760CED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4BFE8D2195599E00760CED /* AppDelegate.m */; };
 		CF4BFE912195599E00760CED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4BFE902195599E00760CED /* ViewController.m */; };
 		CF4BFE942195599E00760CED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF4BFE922195599E00760CED /* Main.storyboard */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		50E89DB8B4221AB51F23F2C8 /* Pods-Douyi-clone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Douyi-clone.release.xcconfig"; path = "Pods/Target Support Files/Pods-Douyi-clone/Pods-Douyi-clone.release.xcconfig"; sourceTree = "<group>"; };
+		575F445389FCFF553818E350 /* Pods-Douyi-clone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Douyi-clone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Douyi-clone/Pods-Douyi-clone.debug.xcconfig"; sourceTree = "<group>"; };
 		CF4BFE892195599E00760CED /* Douyi-clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Douyi-clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF4BFE8C2195599E00760CED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CF4BFE8D2195599E00760CED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		CF4BFE98219559A600760CED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF4BFE9A219559A600760CED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF4BFE9B219559A600760CED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D46D8A42EFF89FFB305F6A92 /* libPods-Douyi-clone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Douyi-clone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F2F2AA141374EE438F87302 /* libPods-Douyi-clone.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB64BA885F9275F93651FAC8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D46D8A42EFF89FFB305F6A92 /* libPods-Douyi-clone.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CF4BFE802195599D00760CED = {
 			isa = PBXGroup;
 			children = (
 				CF4BFE8B2195599E00760CED /* Douyi-clone */,
 				CF4BFE8A2195599E00760CED /* Products */,
+				E0808E8DBFB1A9F85BCCFFF2 /* Pods */,
+				AB64BA885F9275F93651FAC8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +73,8 @@
 		CF4BFE8B2195599E00760CED /* Douyi-clone */ = {
 			isa = PBXGroup;
 			children = (
+				CF4BFEA52195604300760CED /* Models */,
+				CF4BFEA42195602C00760CED /* Controller */,
 				CF4BFE8C2195599E00760CED /* AppDelegate.h */,
 				CF4BFE8D2195599E00760CED /* AppDelegate.m */,
 				CF4BFE8F2195599E00760CED /* ViewController.h */,
@@ -71,6 +88,29 @@
 			path = "Douyi-clone";
 			sourceTree = "<group>";
 		};
+		CF4BFEA42195602C00760CED /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		CF4BFEA52195604300760CED /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E0808E8DBFB1A9F85BCCFFF2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				575F445389FCFF553818E350 /* Pods-Douyi-clone.debug.xcconfig */,
+				50E89DB8B4221AB51F23F2C8 /* Pods-Douyi-clone.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,6 +118,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CF4BFE9F219559A600760CED /* Build configuration list for PBXNativeTarget "Douyi-clone" */;
 			buildPhases = (
+				509A948F3888FDCAB579BA2B /* [CP] Check Pods Manifest.lock */,
 				CF4BFE852195599E00760CED /* Sources */,
 				CF4BFE862195599E00760CED /* Frameworks */,
 				CF4BFE872195599E00760CED /* Resources */,
@@ -135,6 +176,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		509A948F3888FDCAB579BA2B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Douyi-clone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CF4BFE852195599E00760CED /* Sources */ = {
@@ -283,6 +349,7 @@
 		};
 		CF4BFEA0219559A600760CED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 575F445389FCFF553818E350 /* Pods-Douyi-clone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +366,7 @@
 		};
 		CF4BFEA1219559A600760CED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50E89DB8B4221AB51F23F2C8 /* Pods-Douyi-clone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
