@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D707B362195DBAC002B04B7 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D707B352195DBAC002B04B7 /* BaseModel.m */; };
+		0D707B3C219681A4002B04B7 /* UserHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D707B3B219681A4002B04B7 /* UserHomeController.m */; };
+		0D707B4021970EF4002B04B7 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D707B3F21970EF4002B04B7 /* BaseViewController.m */; };
+		0D707B462197FFE8002B04B7 /* UserHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D707B452197FFE8002B04B7 /* UserHeader.m */; };
 		5F2F2AA141374EE438F87302 /* libPods-Douyi-clone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D46D8A42EFF89FFB305F6A92 /* libPods-Douyi-clone.a */; };
 		CF4BFE8E2195599E00760CED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4BFE8D2195599E00760CED /* AppDelegate.m */; };
-		CF4BFE912195599E00760CED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4BFE902195599E00760CED /* ViewController.m */; };
 		CF4BFE942195599E00760CED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF4BFE922195599E00760CED /* Main.storyboard */; };
 		CF4BFE96219559A600760CED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF4BFE95219559A600760CED /* Assets.xcassets */; };
 		CF4BFE99219559A600760CED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF4BFE97219559A600760CED /* LaunchScreen.storyboard */; };
@@ -17,13 +20,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D707B342195DBAC002B04B7 /* BaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = SOURCE_ROOT; };
+		0D707B352195DBAC002B04B7 /* BaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = SOURCE_ROOT; };
+		0D707B3A219681A4002B04B7 /* UserHomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserHomeController.h; sourceTree = "<group>"; };
+		0D707B3B219681A4002B04B7 /* UserHomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserHomeController.m; sourceTree = "<group>"; };
+		0D707B3E21970EF4002B04B7 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		0D707B3F21970EF4002B04B7 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		0D707B4221971774002B04B7 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		0D707B442197FFE8002B04B7 /* UserHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserHeader.h; sourceTree = "<group>"; };
+		0D707B452197FFE8002B04B7 /* UserHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserHeader.m; sourceTree = "<group>"; };
 		50E89DB8B4221AB51F23F2C8 /* Pods-Douyi-clone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Douyi-clone.release.xcconfig"; path = "Pods/Target Support Files/Pods-Douyi-clone/Pods-Douyi-clone.release.xcconfig"; sourceTree = "<group>"; };
 		575F445389FCFF553818E350 /* Pods-Douyi-clone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Douyi-clone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Douyi-clone/Pods-Douyi-clone.debug.xcconfig"; sourceTree = "<group>"; };
 		CF4BFE892195599E00760CED /* Douyi-clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Douyi-clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF4BFE8C2195599E00760CED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CF4BFE8D2195599E00760CED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CF4BFE8F2195599E00760CED /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CF4BFE902195599E00760CED /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CF4BFE932195599E00760CED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF4BFE95219559A600760CED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF4BFE98219559A600760CED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -44,6 +54,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D707B3D21970EC7002B04B7 /* UserHomePage */ = {
+			isa = PBXGroup;
+			children = (
+				0D707B3A219681A4002B04B7 /* UserHomeController.h */,
+				0D707B3B219681A4002B04B7 /* UserHomeController.m */,
+				0D707B442197FFE8002B04B7 /* UserHeader.h */,
+				0D707B452197FFE8002B04B7 /* UserHeader.m */,
+			);
+			path = UserHomePage;
+			sourceTree = "<group>";
+		};
+		0D707B412197174B002B04B7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0D707B4221971774002B04B7 /* Constants.h */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		0D707B4321971D8C002B04B7 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				CF4BFE95219559A600760CED /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		0D707B4821981F18002B04B7 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
 		AB64BA885F9275F93651FAC8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -73,14 +117,14 @@
 		CF4BFE8B2195599E00760CED /* Douyi-clone */ = {
 			isa = PBXGroup;
 			children = (
-				CF4BFEA52195604300760CED /* Models */,
+				0D707B4821981F18002B04B7 /* Category */,
+				0D707B4321971D8C002B04B7 /* Resource */,
+				0D707B412197174B002B04B7 /* Utils */,
+				CF4BFEA52195604300760CED /* Model */,
 				CF4BFEA42195602C00760CED /* Controller */,
 				CF4BFE8C2195599E00760CED /* AppDelegate.h */,
 				CF4BFE8D2195599E00760CED /* AppDelegate.m */,
-				CF4BFE8F2195599E00760CED /* ViewController.h */,
-				CF4BFE902195599E00760CED /* ViewController.m */,
 				CF4BFE922195599E00760CED /* Main.storyboard */,
-				CF4BFE95219559A600760CED /* Assets.xcassets */,
 				CF4BFE97219559A600760CED /* LaunchScreen.storyboard */,
 				CF4BFE9A219559A600760CED /* Info.plist */,
 				CF4BFE9B219559A600760CED /* main.m */,
@@ -91,15 +135,20 @@
 		CF4BFEA42195602C00760CED /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0D707B3D21970EC7002B04B7 /* UserHomePage */,
+				0D707B3E21970EF4002B04B7 /* BaseViewController.h */,
+				0D707B3F21970EF4002B04B7 /* BaseViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
 		};
-		CF4BFEA52195604300760CED /* Models */ = {
+		CF4BFEA52195604300760CED /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0D707B342195DBAC002B04B7 /* BaseModel.h */,
+				0D707B352195DBAC002B04B7 /* BaseModel.m */,
 			);
-			path = Models;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		E0808E8DBFB1A9F85BCCFFF2 /* Pods */ = {
@@ -207,9 +256,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF4BFE912195599E00760CED /* ViewController.m in Sources */,
 				CF4BFE9C219559A600760CED /* main.m in Sources */,
+				0D707B462197FFE8002B04B7 /* UserHeader.m in Sources */,
+				0D707B4021970EF4002B04B7 /* BaseViewController.m in Sources */,
+				0D707B362195DBAC002B04B7 /* BaseModel.m in Sources */,
 				CF4BFE8E2195599E00760CED /* AppDelegate.m in Sources */,
+				0D707B3C219681A4002B04B7 /* UserHomeController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
