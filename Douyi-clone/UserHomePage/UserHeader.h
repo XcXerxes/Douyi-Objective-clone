@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 // 初始化数据
 -(void) initData;
+// 下拉时 调用的 事件
+-(void) overScrollAction: (CGFloat) offsetY;
 @end
 
 NS_ASSUME_NONNULL_END

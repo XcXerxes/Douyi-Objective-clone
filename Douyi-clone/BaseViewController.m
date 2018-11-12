@@ -18,6 +18,7 @@
     [self setNavigationBarTitleColor:ColorWhite];
     [self setNavigationBarBackgroundImage:[UIImage new]];
     [self setBackgroundColor:ColorThemeBackground];
+    [self setStatusBarStyle:UIBarStyleBlack];
     [self initLeftBarButton:@"icon_titlebar_whiteback.png"];
 }
 
@@ -42,6 +43,12 @@
     [[UIApplication sharedApplication] setStatusBarHidden:hidden];
 }
 
+- (void)setStatusBarBackgroundColor:(UIColor *)color {
+    UIView *statusBar = [[[UIApplication sharedApplication] valueForKey:@"statusBarWindow"] valueForKey:@"statusBar"];
+    if ([statusBar respondsToSelector:@selector(setBackgroundColor:)]) {
+        statusBar.backgroundColor = color;
+    }
+}
 - (void)setNavigationBarTitle:(NSString *)title {
     self.navigationItem.title = title;
 }
@@ -52,6 +59,10 @@
 
 - (void)setNavigationBarBackgroundColor:(UIColor *)color {
     [self.navigationController.navigationBar setBackgroundColor:color];
+}
+
+- (void)setStatusBarStyle:(UIBarStyle)style {
+    self.navigationController.navigationBar.barStyle = style;
 }
 - (void)setNavigationBarBackgroundImage:(UIImage *)image {
     [self.navigationController.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];

@@ -11,7 +11,14 @@
 #import "Masonry.h"
 
 @implementation UserHeader
-
+-(instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame: frame];
+    if (self) {
+        NSLog(@"init");
+        [self initAvatarBackground];
+    }
+    return self;
+}
 
 - (void)initAvatarBackground {
     // 初始化 头部背景视图对象
@@ -25,5 +32,15 @@
     // 背景图片的数据
     UIImage *bgImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://pb3.pstatp.com/obj/dbc1001cd29ccc479f7f"]]];
     _topBackground.image = bgImage;
+    NSLog(@"ccc");
 }
+
+// 下拉滚动时调用的事件
+- (void)overScrollAction:(CGFloat)offsetY {
+    CGFloat scaleRatio = fabs(offsetY) / 370.0f;
+    CGFloat overScaleHeight = (370.0f * scaleRatio) /2;
+    _topBackground.transform = CGAffineTransformConcat(CGAffineTransformMakeScale(scaleRatio + 1.0f, scaleRatio + 1.0f), CGAffineTransformMakeTranslation(0, -overScaleHeight));
+}
+
+
 @end

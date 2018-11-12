@@ -30,6 +30,8 @@ NS_ASSUME_NONNULL_BEGIN
 // 参数：BOOL
 -(void) setStatusBarHidden: (BOOL) hidden;
 
+// 设置状态栏的背景颜色
+- (void) setStatusBarBackgroundColor: (UIColor *)color;
 // 设置导航控制器标题
 // 参数：标题的字符串
 -(void) setNavigationBarTitle: (NSString *)title;
@@ -40,6 +42,9 @@ NS_ASSUME_NONNULL_BEGIN
 // 设置导航控制器的背景颜色
 // 参数： 颜色值
 -(void) setNavigationBarBackgroundColor: (UIColor *)color;
+
+// 设置状态栏 的样式
+-(void) setStatusBarStyle: (UIBarStyle )style;
 
 // 设置导航控制器的背景 图片
 -(void) setNavigationBarBackgroundImage: (UIImage *)image;

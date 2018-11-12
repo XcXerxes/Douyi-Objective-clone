@@ -15,7 +15,10 @@
 #define ScreenHeight [UIScreen mainScreen].bounds.size.height
 #define SafeAreaTopHeight ((ScreenHeight >= 812.0) && [[UIDevice currentDevice].model isEqualToString:@"iPhone"]) ? 88 : 64
 
+#define ScreenFrame [UIScreen mainScreen].bounds
+
 // color
+#define ColorClear [UIColor clearColor]
 #define RGBA(R, G, B, A) [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:A]
 #define ColorThemeBackground RGBA(14.0, 15.0, 26.0, 1.0)
 #define ColorWhite [UIColor whiteColor]

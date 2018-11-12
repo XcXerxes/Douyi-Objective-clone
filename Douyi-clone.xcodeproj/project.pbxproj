@@ -17,6 +17,7 @@
 		CF4BFE96219559A600760CED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF4BFE95219559A600760CED /* Assets.xcassets */; };
 		CF4BFE99219559A600760CED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF4BFE97219559A600760CED /* LaunchScreen.storyboard */; };
 		CF4BFE9C219559A600760CED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4BFE9B219559A600760CED /* main.m */; };
+		CF4BFEA821994E2900760CED /* AwemeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4BFEA721994E2900760CED /* AwemeCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,8 @@
 		CF4BFE98219559A600760CED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF4BFE9A219559A600760CED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF4BFE9B219559A600760CED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CF4BFEA621994E2900760CED /* AwemeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AwemeCollectionViewCell.h; sourceTree = "<group>"; };
+		CF4BFEA721994E2900760CED /* AwemeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AwemeCollectionViewCell.m; sourceTree = "<group>"; };
 		D46D8A42EFF89FFB305F6A92 /* libPods-Douyi-clone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Douyi-clone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -61,6 +64,8 @@
 				0D707B3B219681A4002B04B7 /* UserHomeController.m */,
 				0D707B442197FFE8002B04B7 /* UserHeader.h */,
 				0D707B452197FFE8002B04B7 /* UserHeader.m */,
+				CF4BFEA621994E2900760CED /* AwemeCollectionViewCell.h */,
+				CF4BFEA721994E2900760CED /* AwemeCollectionViewCell.m */,
 			);
 			path = UserHomePage;
 			sourceTree = "<group>";
@@ -258,6 +263,7 @@
 			files = (
 				CF4BFE9C219559A600760CED /* main.m in Sources */,
 				0D707B462197FFE8002B04B7 /* UserHeader.m in Sources */,
+				CF4BFEA821994E2900760CED /* AwemeCollectionViewCell.m in Sources */,
 				0D707B4021970EF4002B04B7 /* BaseViewController.m in Sources */,
 				0D707B362195DBAC002B04B7 /* BaseModel.m in Sources */,
 				CF4BFE8E2195599E00760CED /* AppDelegate.m in Sources */,
