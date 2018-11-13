@@ -18,6 +18,12 @@
 		CF4BFE99219559A600760CED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF4BFE97219559A600760CED /* LaunchScreen.storyboard */; };
 		CF4BFE9C219559A600760CED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4BFE9B219559A600760CED /* main.m */; };
 		CF4BFEA821994E2900760CED /* AwemeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4BFEA721994E2900760CED /* AwemeCollectionViewCell.m */; };
+		CFC287ED219A7E1300D20362 /* NetworkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC287EC219A7E1300D20362 /* NetworkHelper.m */; };
+		CFC287F0219A80DF00D20362 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC287EF219A80DF00D20362 /* User.m */; };
+		CFC287F5219AA4A200D20362 /* BaseResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC287F4219AA4A200D20362 /* BaseResponse.m */; };
+		CFC287F8219AA4D400D20362 /* UserResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC287F7219AA4D400D20362 /* UserResponse.m */; };
+		CFC287FB219AA9B000D20362 /* BaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC287FA219AA9B000D20362 /* BaseRequest.m */; };
+		CFC287FE219AA9E300D20362 /* UserRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC287FD219AA9E300D20362 /* UserRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +48,18 @@
 		CF4BFE9B219559A600760CED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CF4BFEA621994E2900760CED /* AwemeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AwemeCollectionViewCell.h; sourceTree = "<group>"; };
 		CF4BFEA721994E2900760CED /* AwemeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AwemeCollectionViewCell.m; sourceTree = "<group>"; };
+		CFC287EB219A7E1300D20362 /* NetworkHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkHelper.h; sourceTree = "<group>"; };
+		CFC287EC219A7E1300D20362 /* NetworkHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkHelper.m; sourceTree = "<group>"; };
+		CFC287EE219A80DF00D20362 /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = User.h; path = "Douyi-clone/Network/User.h"; sourceTree = SOURCE_ROOT; };
+		CFC287EF219A80DF00D20362 /* User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = User.m; path = "Douyi-clone/Network/User.m"; sourceTree = SOURCE_ROOT; };
+		CFC287F3219AA4A200D20362 /* BaseResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseResponse.h; sourceTree = "<group>"; };
+		CFC287F4219AA4A200D20362 /* BaseResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseResponse.m; sourceTree = "<group>"; };
+		CFC287F6219AA4D400D20362 /* UserResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserResponse.h; sourceTree = "<group>"; };
+		CFC287F7219AA4D400D20362 /* UserResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserResponse.m; sourceTree = "<group>"; };
+		CFC287F9219AA9B000D20362 /* BaseRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseRequest.h; sourceTree = "<group>"; };
+		CFC287FA219AA9B000D20362 /* BaseRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseRequest.m; sourceTree = "<group>"; };
+		CFC287FC219AA9E300D20362 /* UserRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserRequest.h; sourceTree = "<group>"; };
+		CFC287FD219AA9E300D20362 /* UserRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserRequest.m; sourceTree = "<group>"; };
 		D46D8A42EFF89FFB305F6A92 /* libPods-Douyi-clone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Douyi-clone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -122,6 +140,7 @@
 		CF4BFE8B2195599E00760CED /* Douyi-clone */ = {
 			isa = PBXGroup;
 			children = (
+				CFC287EA219A7D6B00D20362 /* Network */,
 				0D707B4821981F18002B04B7 /* Category */,
 				0D707B4321971D8C002B04B7 /* Resource */,
 				0D707B412197174B002B04B7 /* Utils */,
@@ -152,8 +171,43 @@
 			children = (
 				0D707B342195DBAC002B04B7 /* BaseModel.h */,
 				0D707B352195DBAC002B04B7 /* BaseModel.m */,
+				CFC287EE219A80DF00D20362 /* User.h */,
+				CFC287EF219A80DF00D20362 /* User.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CFC287EA219A7D6B00D20362 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CFC287F2219AA47100D20362 /* httpResponse */,
+				CFC287F1219AA44D00D20362 /* HttpRequest */,
+				CFC287EB219A7E1300D20362 /* NetworkHelper.h */,
+				CFC287EC219A7E1300D20362 /* NetworkHelper.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CFC287F1219AA44D00D20362 /* HttpRequest */ = {
+			isa = PBXGroup;
+			children = (
+				CFC287F9219AA9B000D20362 /* BaseRequest.h */,
+				CFC287FA219AA9B000D20362 /* BaseRequest.m */,
+				CFC287FC219AA9E300D20362 /* UserRequest.h */,
+				CFC287FD219AA9E300D20362 /* UserRequest.m */,
+			);
+			name = HttpRequest;
+			sourceTree = "<group>";
+		};
+		CFC287F2219AA47100D20362 /* httpResponse */ = {
+			isa = PBXGroup;
+			children = (
+				CFC287F3219AA4A200D20362 /* BaseResponse.h */,
+				CFC287F4219AA4A200D20362 /* BaseResponse.m */,
+				CFC287F6219AA4D400D20362 /* UserResponse.h */,
+				CFC287F7219AA4D400D20362 /* UserResponse.m */,
+			);
+			path = httpResponse;
 			sourceTree = "<group>";
 		};
 		E0808E8DBFB1A9F85BCCFFF2 /* Pods */ = {
@@ -262,9 +316,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF4BFE9C219559A600760CED /* main.m in Sources */,
+				CFC287F8219AA4D400D20362 /* UserResponse.m in Sources */,
 				0D707B462197FFE8002B04B7 /* UserHeader.m in Sources */,
+				CFC287F0219A80DF00D20362 /* User.m in Sources */,
+				CFC287FB219AA9B000D20362 /* BaseRequest.m in Sources */,
 				CF4BFEA821994E2900760CED /* AwemeCollectionViewCell.m in Sources */,
 				0D707B4021970EF4002B04B7 /* BaseViewController.m in Sources */,
+				CFC287F5219AA4A200D20362 /* BaseResponse.m in Sources */,
+				CFC287FE219AA9E300D20362 /* UserRequest.m in Sources */,
+				CFC287ED219A7E1300D20362 /* NetworkHelper.m in Sources */,
 				0D707B362195DBAC002B04B7 /* BaseModel.m in Sources */,
 				CF4BFE8E2195599E00760CED /* AppDelegate.m in Sources */,
 				0D707B3C219681A4002B04B7 /* UserHomeController.m in Sources */,
