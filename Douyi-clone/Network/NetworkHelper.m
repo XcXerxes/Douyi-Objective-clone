@@ -56,10 +56,14 @@ NSString *const FindUserByUidPath = @"user";
         message = [dic objectForKey:@"message"];
     }
     if (code == 0) {
-        success(responseObject)
+        // 如果成功，传递成功的消息
+        success(responseObject);
     } else {
-        NSDictionary *userInfo = [NSDictionary dictionaryWithObjects:message forKeys:NSLocalizedDescriptionKey];
-        NSError *error = [NSError errorWithDomain:NetworkDomain code:HttpResqu userInfo:userInfo];
+        // 初始化失败的 userInfo 内容
+        NSDictionary *userInfo = [NSDictionary dictionaryWithObject:message forKey:NSLocalizedDescriptionKey];
+        NSError *error = [NSError errorWithDomain:NetworkDomain code:HttpRequestFailed userInfo:userInfo];
+        // 传递失败的 消息
+        failure(error);
     }
 }
 @end

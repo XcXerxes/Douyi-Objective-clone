@@ -40,8 +40,8 @@ extern NSString *const FindAwemeFavoriteByPagePath;
 
 // 定义失败的 状态 code
 typedef enum {
-    HttpRequestFailed = -1000;
-};
+    HttpRequestFailed = -1000
+} NetworkError;
 // 定义 成功的回调 和失败的回调
 typedef void (HttpSuccess)(id data);
 typedef void (HttpFailure)(NSError *error);
