@@ -27,6 +27,43 @@
     _topBackground.contentMode = UIViewContentModeScaleAspectFill;
     [self addSubview:_topBackground];
     
+    // 设置 头部的 下部分的背景对象
+    // 设置图片对象的 位置大小
+    _bottomBackground =  [[UIImageView alloc] initWithFrame:CGRectMake(0, 35 + SafeAreaTopHeight, ScreenWidth, self.bounds.size.height - (35 + SafeAreaTopHeight))];
+    // 设置图片对象的 显示方式
+    _bottomBackground.contentMode = UIViewContentModeScaleAspectFill;
+    NSLog(@"===%@", self);
+    [self addSubview:_bottomBackground];
+    // 初始化 一个 模糊对象
+    // 设置模糊的样式
+    UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+    // 初始化视图
+    UIVisualEffectView *visualEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+    // 设置位置大小
+    visualEffectView.frame = _bottomBackground.bounds;
+    // 设置透明度
+    visualEffectView.alpha = 1;
+    [_bottomBackground addSubview:visualEffectView];
+    
+    CAShapeLayer *maskLayer = [CAShapeLayer layer];
+    maskLayer.path = [self createBezierPath].CGPath;
+    _bottomBackground.layer.mask = maskLayer;
+    
+    
+}
+-(UIBezierPath *)createBezierPath {
+    int avatarRadius = 54;
+    int topOffset = 16;
+    UIBezierPath *bezierPath = [UIBezierPath bezierPath];
+    [bezierPath moveToPoint:CGPointMake(0, topOffset)];
+    [bezierPath addLineToPoint:CGPointMake(25, topOffset)];
+    [bezierPath addArcWithCenter:CGPointMake(25 + avatarRadius * cos(M_PI/4), avatarRadius * sin(M_PI/4) + topOffset) radius:avatarRadius startAngle:(M_PI * 5)/4 endAngle:(M_PI * 7)/4 clockwise:YES];
+    [bezierPath addLineToPoint:CGPointMake(25 + avatarRadius * cos(M_PI/4), topOffset)];
+    [bezierPath addLineToPoint:CGPointMake(ScreenWidth, topOffset)];
+    [bezierPath addLineToPoint:CGPointMake(ScreenWidth, self.bounds.size.height - (50 + SafeAreaTopHeight) + topOffset - 1)];
+    [bezierPath addLineToPoint:CGPointMake(0, self.bounds.size.height - (50 + SafeAreaTopHeight) + topOffset - 1)];
+    [bezierPath closePath];
+    return bezierPath;
 }
 - (void)initData:(User *)user {
     // 背景图片的数据

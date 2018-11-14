@@ -14,7 +14,7 @@
 #import "NetworkHelper.h"
 
 // 头部控件的整体高度
-#define kUserHeaderHeight    350 + SafeAreaTopHeight
+#define kUserHeaderHeight    (int) (350+SafeAreaTopHeight)
 // tabBar 的 高度
 #define kSlideTabBarHeight   40
 
@@ -140,7 +140,10 @@ UIScrollViewDelegate
 }
 // 返回头部控件 的高度
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
-    return CGSizeMake(ScreenWidth, kUserHeaderHeight);
+    // 获取安全头部的高度
+    float f = SafeAreaTopHeight;
+    // 设置 整体头部的高度
+    return CGSizeMake(ScreenWidth, 350 + f);
 }
 
 // scrollView delegate
