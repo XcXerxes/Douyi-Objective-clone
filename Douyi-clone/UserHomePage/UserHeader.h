@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class User;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UserHeader : UICollectionReusableView
@@ -15,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, strong) UIImageView *topBackground;
 
 // 初始化数据
--(void) initData;
+-(void) initData:(User *)user;
 // 下拉时 调用的 事件
 -(void) overScrollAction: (CGFloat) offsetY;
 @end

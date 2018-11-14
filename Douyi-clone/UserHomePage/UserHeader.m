@@ -28,7 +28,7 @@
     [self addSubview:_topBackground];
     
 }
-- (void)initData {
+- (void)initData:(User *)user {
     // 背景图片的数据
     UIImage *bgImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://pb3.pstatp.com/obj/dbc1001cd29ccc479f7f"]]];
     _topBackground.image = bgImage;

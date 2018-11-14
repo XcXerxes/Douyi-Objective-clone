@@ -24,6 +24,12 @@
 		CFC287F8219AA4D400D20362 /* UserResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC287F7219AA4D400D20362 /* UserResponse.m */; };
 		CFC287FB219AA9B000D20362 /* BaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC287FA219AA9B000D20362 /* BaseRequest.m */; };
 		CFC287FE219AA9E300D20362 /* UserRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC287FD219AA9E300D20362 /* UserRequest.m */; };
+		CFFC0A3A219BB67C003A7911 /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = CFFC0A39219BB67C003A7911 /* user.json */; };
+		CFFC0A3C219BB6B3003A7911 /* awemes.json in Resources */ = {isa = PBXBuildFile; fileRef = CFFC0A3B219BB6B3003A7911 /* awemes.json */; };
+		CFFC0A3E219BB6E0003A7911 /* favorites.json in Resources */ = {isa = PBXBuildFile; fileRef = CFFC0A3D219BB6E0003A7911 /* favorites.json */; };
+		CFFC0A40219BB6EF003A7911 /* comments.json in Resources */ = {isa = PBXBuildFile; fileRef = CFFC0A3F219BB6EF003A7911 /* comments.json */; };
+		CFFC0A42219BB6FB003A7911 /* emotion.json in Resources */ = {isa = PBXBuildFile; fileRef = CFFC0A41219BB6FB003A7911 /* emotion.json */; };
+		CFFC0A44219BB710003A7911 /* groupchats.json in Resources */ = {isa = PBXBuildFile; fileRef = CFFC0A43219BB710003A7911 /* groupchats.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +66,12 @@
 		CFC287FA219AA9B000D20362 /* BaseRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseRequest.m; sourceTree = "<group>"; };
 		CFC287FC219AA9E300D20362 /* UserRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserRequest.h; sourceTree = "<group>"; };
 		CFC287FD219AA9E300D20362 /* UserRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserRequest.m; sourceTree = "<group>"; };
+		CFFC0A39219BB67C003A7911 /* user.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = user.json; sourceTree = "<group>"; };
+		CFFC0A3B219BB6B3003A7911 /* awemes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = awemes.json; sourceTree = "<group>"; };
+		CFFC0A3D219BB6E0003A7911 /* favorites.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = favorites.json; sourceTree = "<group>"; };
+		CFFC0A3F219BB6EF003A7911 /* comments.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = comments.json; sourceTree = "<group>"; };
+		CFFC0A41219BB6FB003A7911 /* emotion.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = emotion.json; sourceTree = "<group>"; };
+		CFFC0A43219BB710003A7911 /* groupchats.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = groupchats.json; sourceTree = "<group>"; };
 		D46D8A42EFF89FFB305F6A92 /* libPods-Douyi-clone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Douyi-clone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -100,6 +112,12 @@
 			isa = PBXGroup;
 			children = (
 				CF4BFE95219559A600760CED /* Assets.xcassets */,
+				CFFC0A39219BB67C003A7911 /* user.json */,
+				CFFC0A3B219BB6B3003A7911 /* awemes.json */,
+				CFFC0A3D219BB6E0003A7911 /* favorites.json */,
+				CFFC0A3F219BB6EF003A7911 /* comments.json */,
+				CFFC0A41219BB6FB003A7911 /* emotion.json */,
+				CFFC0A43219BB710003A7911 /* groupchats.json */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -140,18 +158,18 @@
 		CF4BFE8B2195599E00760CED /* Douyi-clone */ = {
 			isa = PBXGroup;
 			children = (
-				CFC287EA219A7D6B00D20362 /* Network */,
-				0D707B4821981F18002B04B7 /* Category */,
-				0D707B4321971D8C002B04B7 /* Resource */,
-				0D707B412197174B002B04B7 /* Utils */,
-				CF4BFEA52195604300760CED /* Model */,
-				CF4BFEA42195602C00760CED /* Controller */,
 				CF4BFE8C2195599E00760CED /* AppDelegate.h */,
 				CF4BFE8D2195599E00760CED /* AppDelegate.m */,
-				CF4BFE922195599E00760CED /* Main.storyboard */,
-				CF4BFE97219559A600760CED /* LaunchScreen.storyboard */,
+				0D707B4821981F18002B04B7 /* Category */,
+				CF4BFEA42195602C00760CED /* Controller */,
 				CF4BFE9A219559A600760CED /* Info.plist */,
+				CF4BFE97219559A600760CED /* LaunchScreen.storyboard */,
 				CF4BFE9B219559A600760CED /* main.m */,
+				CF4BFE922195599E00760CED /* Main.storyboard */,
+				CF4BFEA52195604300760CED /* Model */,
+				CFC287EA219A7D6B00D20362 /* Network */,
+				0D707B4321971D8C002B04B7 /* Resource */,
+				0D707B412197174B002B04B7 /* Utils */,
 			);
 			path = "Douyi-clone";
 			sourceTree = "<group>";
@@ -277,9 +295,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFFC0A3A219BB67C003A7911 /* user.json in Resources */,
+				CFFC0A44219BB710003A7911 /* groupchats.json in Resources */,
+				CFFC0A3C219BB6B3003A7911 /* awemes.json in Resources */,
 				CF4BFE99219559A600760CED /* LaunchScreen.storyboard in Resources */,
 				CF4BFE96219559A600760CED /* Assets.xcassets in Resources */,
 				CF4BFE942195599E00760CED /* Main.storyboard in Resources */,
+				CFFC0A3E219BB6E0003A7911 /* favorites.json in Resources */,
+				CFFC0A40219BB6EF003A7911 /* comments.json in Resources */,
+				CFFC0A42219BB6FB003A7911 /* emotion.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

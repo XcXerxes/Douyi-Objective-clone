@@ -10,6 +10,9 @@
 #import "UserHeader.h"
 #import "AwemeCollectionViewCell.h"
 
+#import "User.h"
+#import "NetworkHelper.h"
+
 // 头部控件的整体高度
 #define kUserHeaderHeight    350 + SafeAreaTopHeight
 // tabBar 的 高度
@@ -28,12 +31,26 @@ UICollectionViewDataSource,
 UICollectionViewDelegateFlowLayout,
 UIScrollViewDelegate
 >
+
+// 定义 用户请求的 uid
+@property (nonatomic, copy) NSString *uid;
 // 定义用户头部 的类属性对象
 @property (nonatomic, strong) UserHeader *userHeader;
 
+// 定义User 数据模型
+@property (nonatomic, strong)User *user;
 @end
 
 @implementation UserHomeController
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _uid = @"97795069353";
+    }
+    return self;
+}
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -50,6 +67,11 @@ UIScrollViewDelegate
     self.title = @"抖音";
     // Do any additional setup after loading the view.
     [self initCollectionView];
+    
+    // 初始化 加载 用户数据
+    [self fetchUserData];
+    // 使用通知中心 加载数据
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onNetworkStatusChange:) name:NetworkStatesChangeNotification object:nil];
 }
 
 // 初始化整个collectionView
@@ -111,7 +133,9 @@ UIScrollViewDelegate
     UserHeader *header = [_collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:kUserHeaderCell forIndexPath:indexPath];
     _userHeader = header;
     // 初始化 userHeader 的数据
-    [header initData];
+    if (_user) {
+        [header initData:_user];
+    }
     return header;
 }
 // 返回头部控件 的高度
@@ -127,6 +151,46 @@ UIScrollViewDelegate
     if (offsetY < 0) {
         [_userHeader overScrollAction: offsetY];
     }
+}
+
+// 网络状态发生变化
+-(void) onNetworkStatusChange:(NSNotification *)notification {
+    // 如果没有网络
+    NSLog(@"ccccc");
+    if (![NetworkHelper isNotReachableStatus:*[NetworkHelper networkStatus]]) {
+        if (_user == nil) {
+            // 加载用户信息
+            [self fetchUserData];
+        }
+    }
+}
+
+// 获取 用户信息
+- (void)fetchUserData {
+    // 防止 嵌套依赖
+    __weak typeof (self) wself = self;
+    // 初始化 用户request 对象
+    UserRequest *request = [UserRequest new];
+    // 给用户 request 对象 赋值 uid
+    request.uid = _uid;
+    // 通过get 请求 获取 用户信息
+    // 参数1: 请求地址 ， 参数通过 全局定义获得
+    // 参数2: 请求的参数类  这里是 用户 request 对象类
+    // 参数3: 成功的回调， 返回 responseObject
+    // 参数4： 失败的回调
+    [NetworkHelper getWithUrlPath:FindUserByUidPath request:request success: ^(id data) {
+        NSLog(@"data=========%@", data);
+        // 初始化 用户 返回值 对象
+        UserResponse *response = [[UserResponse alloc] initWithDictionary:data error:nil];
+        // 将返回的 数据 赋值给 user 模型
+        wself.user = response.data;
+        // 设置 导航控制器 的标题 为 用户的名称
+        [wself setTitle:self.user.nickname];
+        // 重新渲染
+        [wself.collectionView reloadSections:[NSIndexSet indexSetWithIndex:0]];
+    } failure: ^(NSError *error) {
+        NSLog(@"%@", error);
+    }];
 }
 /*
 #pragma mark - Navigation

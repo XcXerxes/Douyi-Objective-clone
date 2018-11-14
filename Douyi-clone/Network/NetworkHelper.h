@@ -43,8 +43,9 @@ typedef enum {
     HttpRequestFailed = -1000
 } NetworkError;
 // 定义 成功的回调 和失败的回调
-typedef void (HttpSuccess)(id data);
-typedef void (HttpFailure)(NSError *error);
+typedef void (^HttpSuccess)(id data);
+typedef void (^HttpFailure)(NSError *error);
+
 
 
 NS_ASSUME_NONNULL_BEGIN
@@ -71,7 +72,7 @@ NS_ASSUME_NONNULL_BEGIN
 // 所有通过 POST 请求的 公共调用
 +(NSURLSessionDataTask *)postWithUrlPath: (NSString *)urlPath request:(BaseRequest *)request success:(HttpSuccess)success failure:(HttpFailure)failure;
 
-// 获取网络监听 类
+// 获取网络监听 的连接对象
 +(AFNetworkReachabilityManager *)shareReachabilityManager;
 
 // 开始监听
