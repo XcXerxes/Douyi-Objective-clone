@@ -16,6 +16,18 @@ NS_ASSUME_NONNULL_BEGIN
 @interface User : BaseModel
 // 用户名称
 @property (nonatomic, copy) NSString *nickname;
+// 抖音号
+@property (nonatomic, copy) NSString *short_id;
+// 性别
+@property (nonatomic, assign) NSInteger gender;
+// 获赞
+@property (nonatomic, assign) NSInteger total_favorited;
+// 关注
+@property (nonatomic, assign) NSInteger following_count;
+// 粉丝
+@property (nonatomic, assign) NSInteger follower_count;
+// 个性签名
+@property (nonatomic, copy) NSString *signature;
 // 头像图片地址
 @property (nonatomic, copy) NSString *avatar_uri;
 

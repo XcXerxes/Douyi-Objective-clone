@@ -182,7 +182,6 @@ UIScrollViewDelegate
     // 参数3: 成功的回调， 返回 responseObject
     // 参数4： 失败的回调
     [NetworkHelper getWithUrlPath:FindUserByUidPath request:request success: ^(id data) {
-        NSLog(@"data=========%@", data);
         // 初始化 用户 返回值 对象
         UserResponse *response = [[UserResponse alloc] initWithDictionary:data error:nil];
         // 将返回的 数据 赋值给 user 模型
