@@ -8,6 +8,20 @@
 
 #import "AwemeCollectionViewCell.h"
 
+#import "Aweme.h"
+
 @implementation AwemeCollectionViewCell
 
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+       
+    }
+    return self;
+}
+
+- (void)initData:(Aweme *)aweme {
+    
+}
 @end

@@ -29,7 +29,8 @@ NSString * const kAwemeCollectionCell  = @"AwemeCollectionCell";
 UICollectionViewDelegate,
 UICollectionViewDataSource,
 UICollectionViewDelegateFlowLayout,
-UIScrollViewDelegate
+UIScrollViewDelegate,
+slideTabBarOnTabActionDelegate
 >
 
 // 定义 用户请求的 uid
@@ -122,7 +123,6 @@ UIScrollViewDelegate
 // 返回每个单元格的 内容
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     AwemeCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kAwemeCollectionCell forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor yellowColor];
     NSLog(@"1111");
     return cell;
     
@@ -135,6 +135,7 @@ UIScrollViewDelegate
     // 初始化 userHeader 的数据
     if (_user) {
         [header initData:_user];
+        header.slideTabBar.delegate = self;
     }
     return header;
 }
@@ -193,6 +194,11 @@ UIScrollViewDelegate
     } failure: ^(NSError *error) {
         NSLog(@"%@", error);
     }];
+}
+
+// slideTabBar delegate
+- (void)onTabTapAction:(NSInteger)index {
+    NSLog(@"index=======%ld", index);
 }
 /*
 #pragma mark - Navigation

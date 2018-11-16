@@ -30,6 +30,11 @@
 		CFFC0A40219BB6EF003A7911 /* comments.json in Resources */ = {isa = PBXBuildFile; fileRef = CFFC0A3F219BB6EF003A7911 /* comments.json */; };
 		CFFC0A42219BB6FB003A7911 /* emotion.json in Resources */ = {isa = PBXBuildFile; fileRef = CFFC0A41219BB6FB003A7911 /* emotion.json */; };
 		CFFC0A44219BB710003A7911 /* groupchats.json in Resources */ = {isa = PBXBuildFile; fileRef = CFFC0A43219BB710003A7911 /* groupchats.json */; };
+		CFFC0A47219E567C003A7911 /* SlideTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFC0A46219E567C003A7911 /* SlideTabBar.m */; };
+		CFFC0A4A219EB077003A7911 /* AwemeListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFC0A49219EB077003A7911 /* AwemeListRequest.m */; };
+		CFFC0A4D219EB2DC003A7911 /* AwemeResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFC0A4C219EB2DC003A7911 /* AwemeResponse.m */; };
+		CFFC0A50219EB2EC003A7911 /* AwemeListResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFC0A4F219EB2EC003A7911 /* AwemeListResponse.m */; };
+		CFFC0A53219EB37E003A7911 /* Aweme.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFC0A52219EB37E003A7911 /* Aweme.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +77,16 @@
 		CFFC0A3F219BB6EF003A7911 /* comments.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = comments.json; sourceTree = "<group>"; };
 		CFFC0A41219BB6FB003A7911 /* emotion.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = emotion.json; sourceTree = "<group>"; };
 		CFFC0A43219BB710003A7911 /* groupchats.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = groupchats.json; sourceTree = "<group>"; };
+		CFFC0A45219E567C003A7911 /* SlideTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlideTabBar.h; sourceTree = "<group>"; };
+		CFFC0A46219E567C003A7911 /* SlideTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlideTabBar.m; sourceTree = "<group>"; };
+		CFFC0A48219EB077003A7911 /* AwemeListRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AwemeListRequest.h; sourceTree = "<group>"; };
+		CFFC0A49219EB077003A7911 /* AwemeListRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AwemeListRequest.m; sourceTree = "<group>"; };
+		CFFC0A4B219EB2DC003A7911 /* AwemeResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AwemeResponse.h; sourceTree = "<group>"; };
+		CFFC0A4C219EB2DC003A7911 /* AwemeResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AwemeResponse.m; sourceTree = "<group>"; };
+		CFFC0A4E219EB2EC003A7911 /* AwemeListResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AwemeListResponse.h; sourceTree = "<group>"; };
+		CFFC0A4F219EB2EC003A7911 /* AwemeListResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AwemeListResponse.m; sourceTree = "<group>"; };
+		CFFC0A51219EB37E003A7911 /* Aweme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Aweme.h; path = "Douyi-clone/Network/httpResponse/Aweme.h"; sourceTree = SOURCE_ROOT; };
+		CFFC0A52219EB37E003A7911 /* Aweme.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Aweme.m; path = "Douyi-clone/Network/httpResponse/Aweme.m"; sourceTree = SOURCE_ROOT; };
 		D46D8A42EFF89FFB305F6A92 /* libPods-Douyi-clone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Douyi-clone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -96,6 +111,8 @@
 				0D707B452197FFE8002B04B7 /* UserHeader.m */,
 				CF4BFEA621994E2900760CED /* AwemeCollectionViewCell.h */,
 				CF4BFEA721994E2900760CED /* AwemeCollectionViewCell.m */,
+				CFFC0A45219E567C003A7911 /* SlideTabBar.h */,
+				CFFC0A46219E567C003A7911 /* SlideTabBar.m */,
 			);
 			path = UserHomePage;
 			sourceTree = "<group>";
@@ -191,6 +208,8 @@
 				0D707B352195DBAC002B04B7 /* BaseModel.m */,
 				CFC287EE219A80DF00D20362 /* User.h */,
 				CFC287EF219A80DF00D20362 /* User.m */,
+				CFFC0A51219EB37E003A7911 /* Aweme.h */,
+				CFFC0A52219EB37E003A7911 /* Aweme.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -213,6 +232,8 @@
 				CFC287FA219AA9B000D20362 /* BaseRequest.m */,
 				CFC287FC219AA9E300D20362 /* UserRequest.h */,
 				CFC287FD219AA9E300D20362 /* UserRequest.m */,
+				CFFC0A48219EB077003A7911 /* AwemeListRequest.h */,
+				CFFC0A49219EB077003A7911 /* AwemeListRequest.m */,
 			);
 			name = HttpRequest;
 			sourceTree = "<group>";
@@ -224,6 +245,10 @@
 				CFC287F4219AA4A200D20362 /* BaseResponse.m */,
 				CFC287F6219AA4D400D20362 /* UserResponse.h */,
 				CFC287F7219AA4D400D20362 /* UserResponse.m */,
+				CFFC0A4B219EB2DC003A7911 /* AwemeResponse.h */,
+				CFFC0A4C219EB2DC003A7911 /* AwemeResponse.m */,
+				CFFC0A4E219EB2EC003A7911 /* AwemeListResponse.h */,
+				CFFC0A4F219EB2EC003A7911 /* AwemeListResponse.m */,
 			);
 			path = httpResponse;
 			sourceTree = "<group>";
@@ -339,12 +364,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFFC0A4A219EB077003A7911 /* AwemeListRequest.m in Sources */,
 				CF4BFE9C219559A600760CED /* main.m in Sources */,
+				CFFC0A47219E567C003A7911 /* SlideTabBar.m in Sources */,
 				CFC287F8219AA4D400D20362 /* UserResponse.m in Sources */,
 				0D707B462197FFE8002B04B7 /* UserHeader.m in Sources */,
 				CFC287F0219A80DF00D20362 /* User.m in Sources */,
 				CFC287FB219AA9B000D20362 /* BaseRequest.m in Sources */,
 				CF4BFEA821994E2900760CED /* AwemeCollectionViewCell.m in Sources */,
+				CFFC0A50219EB2EC003A7911 /* AwemeListResponse.m in Sources */,
+				CFFC0A53219EB37E003A7911 /* Aweme.m in Sources */,
+				CFFC0A4D219EB2DC003A7911 /* AwemeResponse.m in Sources */,
 				0D707B4021970EF4002B04B7 /* BaseViewController.m in Sources */,
 				CFC287F5219AA4A200D20362 /* BaseResponse.m in Sources */,
 				CFC287FE219AA9E300D20362 /* UserRequest.m in Sources */,

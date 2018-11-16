@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SlideTabBar.h"
 
 @class User;
 
@@ -61,6 +62,8 @@ NS_ASSUME_NONNULL_BEGIN
 // 获取粉丝数
 @property (nonatomic, strong) UIButton *followedNumBtn;
 
+// 定义slidebar 控件
+@property (nonatomic, strong) SlideTabBar *slideTabBar;
 
 // 初始化数据
 -(void) initData:(User *)user;

@@ -26,6 +26,7 @@
 
 #define ColorThemeBackground RGBA(14.0, 15.0, 26.0, 1.0)
 #define ColorThemeRed RGBA(241.0, 47.0, 84.0, 1.0)
+#define ColorThemeYellow RGBA(250.0, 206.0, 21.0, 1.0)
 #define ColorWhite [UIColor whiteColor]
 
 // font
@@ -33,6 +34,7 @@
 #define SmallFont [UIFont systemFontOfSize:12.0]
 #define MediumFont [UIFont systemFontOfSize:14.0]
 #define BigBoldFont [UIFont boldSystemFontOfSize:16.0]
+#define BigFont [UIFont systemFontOfSize:16.0]
 #define SuperBigBoldFont [UIFont boldSystemFontOfSize:26.0]
 
 #endif /* Constants_h */

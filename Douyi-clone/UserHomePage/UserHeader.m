@@ -210,6 +210,14 @@ static const NSInteger UserHeaderSettingTag = 0x05;
         make.left.equalTo(self.followNumBtn.mas_right).offset(30);
     }];
     
+    // 设置 slidebar
+    _slideTabBar = [SlideTabBar new];
+    [self addSubview:_slideTabBar];
+    [_slideTabBar mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.height.mas_equalTo(40);
+        make.left.right.bottom.equalTo(self);
+    }];
+    [_slideTabBar setLabels:@[@"作品0", @"喜欢0"] tabIndex:0];
 }
 
 - (void)initAvatarBackground {
