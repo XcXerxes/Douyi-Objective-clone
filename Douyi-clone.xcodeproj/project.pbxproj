@@ -35,6 +35,9 @@
 		CFFC0A4D219EB2DC003A7911 /* AwemeResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFC0A4C219EB2DC003A7911 /* AwemeResponse.m */; };
 		CFFC0A50219EB2EC003A7911 /* AwemeListResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFC0A4F219EB2EC003A7911 /* AwemeListResponse.m */; };
 		CFFC0A53219EB37E003A7911 /* Aweme.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFC0A52219EB37E003A7911 /* Aweme.m */; };
+		CFFC0A57219FAE5D003A7911 /* WebPImage.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFC0A56219FAE5D003A7911 /* WebPImage.m */; };
+		CFFC0A5A219FAE75003A7911 /* WebPImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFC0A59219FAE75003A7911 /* WebPImageView.m */; };
+		CFFC0A5D219FAE95003A7911 /* WebPQueueManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFC0A5C219FAE95003A7911 /* WebPQueueManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +90,12 @@
 		CFFC0A4F219EB2EC003A7911 /* AwemeListResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AwemeListResponse.m; sourceTree = "<group>"; };
 		CFFC0A51219EB37E003A7911 /* Aweme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Aweme.h; path = "Douyi-clone/Network/httpResponse/Aweme.h"; sourceTree = SOURCE_ROOT; };
 		CFFC0A52219EB37E003A7911 /* Aweme.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Aweme.m; path = "Douyi-clone/Network/httpResponse/Aweme.m"; sourceTree = SOURCE_ROOT; };
+		CFFC0A55219FAE5D003A7911 /* WebPImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebPImage.h; sourceTree = "<group>"; };
+		CFFC0A56219FAE5D003A7911 /* WebPImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebPImage.m; sourceTree = "<group>"; };
+		CFFC0A58219FAE75003A7911 /* WebPImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebPImageView.h; sourceTree = "<group>"; };
+		CFFC0A59219FAE75003A7911 /* WebPImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebPImageView.m; sourceTree = "<group>"; };
+		CFFC0A5B219FAE95003A7911 /* WebPQueueManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebPQueueManager.h; sourceTree = "<group>"; };
+		CFFC0A5C219FAE95003A7911 /* WebPQueueManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebPQueueManager.m; sourceTree = "<group>"; };
 		D46D8A42EFF89FFB305F6A92 /* libPods-Douyi-clone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Douyi-clone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -175,6 +184,7 @@
 		CF4BFE8B2195599E00760CED /* Douyi-clone */ = {
 			isa = PBXGroup;
 			children = (
+				CFFC0A54219FAE0E003A7911 /* WebP */,
 				CF4BFE8C2195599E00760CED /* AppDelegate.h */,
 				CF4BFE8D2195599E00760CED /* AppDelegate.m */,
 				0D707B4821981F18002B04B7 /* Category */,
@@ -251,6 +261,19 @@
 				CFFC0A4F219EB2EC003A7911 /* AwemeListResponse.m */,
 			);
 			path = httpResponse;
+			sourceTree = "<group>";
+		};
+		CFFC0A54219FAE0E003A7911 /* WebP */ = {
+			isa = PBXGroup;
+			children = (
+				CFFC0A55219FAE5D003A7911 /* WebPImage.h */,
+				CFFC0A56219FAE5D003A7911 /* WebPImage.m */,
+				CFFC0A58219FAE75003A7911 /* WebPImageView.h */,
+				CFFC0A59219FAE75003A7911 /* WebPImageView.m */,
+				CFFC0A5B219FAE95003A7911 /* WebPQueueManager.h */,
+				CFFC0A5C219FAE95003A7911 /* WebPQueueManager.m */,
+			);
+			name = WebP;
 			sourceTree = "<group>";
 		};
 		E0808E8DBFB1A9F85BCCFFF2 /* Pods */ = {
@@ -367,6 +390,7 @@
 				CFFC0A4A219EB077003A7911 /* AwemeListRequest.m in Sources */,
 				CF4BFE9C219559A600760CED /* main.m in Sources */,
 				CFFC0A47219E567C003A7911 /* SlideTabBar.m in Sources */,
+				CFFC0A57219FAE5D003A7911 /* WebPImage.m in Sources */,
 				CFC287F8219AA4D400D20362 /* UserResponse.m in Sources */,
 				0D707B462197FFE8002B04B7 /* UserHeader.m in Sources */,
 				CFC287F0219A80DF00D20362 /* User.m in Sources */,
@@ -381,6 +405,8 @@
 				CFC287ED219A7E1300D20362 /* NetworkHelper.m in Sources */,
 				0D707B362195DBAC002B04B7 /* BaseModel.m in Sources */,
 				CF4BFE8E2195599E00760CED /* AppDelegate.m in Sources */,
+				CFFC0A5D219FAE95003A7911 /* WebPQueueManager.m in Sources */,
+				CFFC0A5A219FAE75003A7911 /* WebPImageView.m in Sources */,
 				0D707B3C219681A4002B04B7 /* UserHomeController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
