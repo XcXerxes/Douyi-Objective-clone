@@ -85,6 +85,10 @@
     }
     WebPDemuxDelete(demux);
 }
+static void freeWebpFrameImageData(void *info, const void *data, size_t size) {
+    free((void*)data);
+}
+
 - (UIImage *)decodeWebPImageAtIndex:(NSInteger)index {
     WebPFrame *webPFrame = _frames[index];
     WebPData frame = webPFrame.webPData;

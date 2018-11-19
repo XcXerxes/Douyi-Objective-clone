@@ -9,6 +9,7 @@
 #import "AwemeCollectionViewCell.h"
 
 #import "Aweme.h"
+#import "Constants.h"
 
 @implementation AwemeCollectionViewCell
 
@@ -16,7 +17,9 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-       
+        _view = [UIView new];
+        _view.backgroundColor = ColorThemeRed;
+        _view.layer.cornerRadius = 10;
     }
     return self;
 }

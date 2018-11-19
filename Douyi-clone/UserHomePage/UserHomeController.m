@@ -40,6 +40,8 @@ slideTabBarOnTabActionDelegate
 
 // 定义User 数据模型
 @property (nonatomic, strong)User *user;
+
+@property (nonatomic, copy) NSMutableArray<UIView *> *awemeList;
 @end
 
 @implementation UserHomeController
@@ -49,6 +51,8 @@ slideTabBarOnTabActionDelegate
     self = [super init];
     if (self) {
         _uid = @"97795069353";
+        _awemeList = [NSMutableArray array];
+        [self loadList];
     }
     return self;
 }
@@ -118,14 +122,24 @@ slideTabBarOnTabActionDelegate
 
 // 返回个数
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 1;
+    return _awemeList.count;
+}
+-(void)loadList {
+    for (int i = 0; i < 5; i ++) {
+        UIView *view = [UIView new];
+        view.frame = CGRectMake(i * ScreenWidth / 3, i * 180, ScreenWidth / 3, 170);
+        [_awemeList addObject:view];
+    }
+}
+// 设置单元格的大小
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return CGSizeMake(ScreenWidth / 3 - 10, 170);
 }
 // 返回每个单元格的 内容
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     AwemeCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kAwemeCollectionCell forIndexPath:indexPath];
-    NSLog(@"1111");
+    cell.backgroundColor = (indexPath.item % 2) ? ColorThemeRed : ColorThemeYellow;
     return cell;
-    
 }
 
 // 返回 头部控件的视图对象
