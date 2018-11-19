@@ -11,6 +11,7 @@
 		0D707B3C219681A4002B04B7 /* UserHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D707B3B219681A4002B04B7 /* UserHomeController.m */; };
 		0D707B4021970EF4002B04B7 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D707B3F21970EF4002B04B7 /* BaseViewController.m */; };
 		0D707B462197FFE8002B04B7 /* UserHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D707B452197FFE8002B04B7 /* UserHeader.m */; };
+		0D707B4E21A2E0A8002B04B7 /* WebPFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D707B4D21A2E0A8002B04B7 /* WebPFrame.m */; };
 		5F2F2AA141374EE438F87302 /* libPods-Douyi-clone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D46D8A42EFF89FFB305F6A92 /* libPods-Douyi-clone.a */; };
 		CF4BFE8E2195599E00760CED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4BFE8D2195599E00760CED /* AppDelegate.m */; };
 		CF4BFE942195599E00760CED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF4BFE922195599E00760CED /* Main.storyboard */; };
@@ -50,6 +51,8 @@
 		0D707B4221971774002B04B7 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		0D707B442197FFE8002B04B7 /* UserHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserHeader.h; sourceTree = "<group>"; };
 		0D707B452197FFE8002B04B7 /* UserHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserHeader.m; sourceTree = "<group>"; };
+		0D707B4C21A2E0A8002B04B7 /* WebPFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebPFrame.h; sourceTree = "<group>"; };
+		0D707B4D21A2E0A8002B04B7 /* WebPFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebPFrame.m; sourceTree = "<group>"; };
 		50E89DB8B4221AB51F23F2C8 /* Pods-Douyi-clone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Douyi-clone.release.xcconfig"; path = "Pods/Target Support Files/Pods-Douyi-clone/Pods-Douyi-clone.release.xcconfig"; sourceTree = "<group>"; };
 		575F445389FCFF553818E350 /* Pods-Douyi-clone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Douyi-clone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Douyi-clone/Pods-Douyi-clone.debug.xcconfig"; sourceTree = "<group>"; };
 		CF4BFE892195599E00760CED /* Douyi-clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Douyi-clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,19 +187,19 @@
 		CF4BFE8B2195599E00760CED /* Douyi-clone */ = {
 			isa = PBXGroup;
 			children = (
-				CFFC0A54219FAE0E003A7911 /* WebP */,
 				CF4BFE8C2195599E00760CED /* AppDelegate.h */,
 				CF4BFE8D2195599E00760CED /* AppDelegate.m */,
+				CF4BFE9B219559A600760CED /* main.m */,
+				CF4BFE9A219559A600760CED /* Info.plist */,
 				0D707B4821981F18002B04B7 /* Category */,
 				CF4BFEA42195602C00760CED /* Controller */,
-				CF4BFE9A219559A600760CED /* Info.plist */,
 				CF4BFE97219559A600760CED /* LaunchScreen.storyboard */,
-				CF4BFE9B219559A600760CED /* main.m */,
 				CF4BFE922195599E00760CED /* Main.storyboard */,
 				CF4BFEA52195604300760CED /* Model */,
 				CFC287EA219A7D6B00D20362 /* Network */,
 				0D707B4321971D8C002B04B7 /* Resource */,
 				0D707B412197174B002B04B7 /* Utils */,
+				CFFC0A54219FAE0E003A7911 /* WebP */,
 			);
 			path = "Douyi-clone";
 			sourceTree = "<group>";
@@ -272,6 +275,8 @@
 				CFFC0A59219FAE75003A7911 /* WebPImageView.m */,
 				CFFC0A5B219FAE95003A7911 /* WebPQueueManager.h */,
 				CFFC0A5C219FAE95003A7911 /* WebPQueueManager.m */,
+				0D707B4C21A2E0A8002B04B7 /* WebPFrame.h */,
+				0D707B4D21A2E0A8002B04B7 /* WebPFrame.m */,
 			);
 			name = WebP;
 			sourceTree = "<group>";
@@ -400,6 +405,7 @@
 				CFFC0A53219EB37E003A7911 /* Aweme.m in Sources */,
 				CFFC0A4D219EB2DC003A7911 /* AwemeResponse.m in Sources */,
 				0D707B4021970EF4002B04B7 /* BaseViewController.m in Sources */,
+				0D707B4E21A2E0A8002B04B7 /* WebPFrame.m in Sources */,
 				CFC287F5219AA4A200D20362 /* BaseResponse.m in Sources */,
 				CFC287FE219AA9E300D20362 /* UserRequest.m in Sources */,
 				CFC287ED219A7E1300D20362 /* NetworkHelper.m in Sources */,
