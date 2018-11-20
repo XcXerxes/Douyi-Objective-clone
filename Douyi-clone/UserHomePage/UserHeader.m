@@ -298,7 +298,7 @@ static const NSInteger UserHeaderSettingTag = 0x05;
     _topBackground.image = bgImage;
     [_nickName setText:user.nickname];
     // 设置头像的图片
-    [_avatar setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:user.avatar_medium.url_list.firstObject]]]];
+//    [_avatar setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:user.avatar_medium.url_list.firstObject]]]];
     // 获取抖音号
     [_douyinNum setText: [NSString stringWithFormat:@"抖音号：%@", user.short_id]];
     // 获取个性签名
@@ -317,9 +317,17 @@ static const NSInteger UserHeaderSettingTag = 0x05;
 
 // 下拉滚动时调用的事件
 - (void)overScrollAction:(CGFloat)offsetY {
+    // 计算背景容器缩放比例
     CGFloat scaleRatio = fabs(offsetY) / 370.0f;
+    // 计算容器缩放后 y 方向的偏移量
     CGFloat overScaleHeight = (370.0f * scaleRatio) /2;
+    // 缩放同时 平移背景容器
     _topBackground.transform = CGAffineTransformConcat(CGAffineTransformMakeScale(scaleRatio + 1.0f, scaleRatio + 1.0f), CGAffineTransformMakeTranslation(0, -overScaleHeight));
+}
+
+- (void)scrollToTopAction:(CGFloat)offsetY {
+    CGFloat alphaRatio = offsetY / (370.0f - 44 - [UIApplication sharedApplication].statusBarFrame.size.height);
+    _containerView.alpha = 1.0f - alphaRatio;
 }
 
 

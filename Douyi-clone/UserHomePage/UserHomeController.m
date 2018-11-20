@@ -9,6 +9,7 @@
 #import "UserHomeController.h"
 #import "UserHeader.h"
 #import "AwemeCollectionViewCell.h"
+#import "HoverViewFlowLayout.h"
 
 #import "User.h"
 #import "NetworkHelper.h"
@@ -82,7 +83,7 @@ slideTabBarOnTabActionDelegate
 // 初始化整个collectionView
 - (void)initCollectionView {
     // 初始化 layout
-    UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
+    HoverViewFlowLayout *layout = [[HoverViewFlowLayout alloc] initWithTopHeight:SafeAreaTopHeight + kSlideTabBarHeight];
     layout.minimumLineSpacing = 1;
     layout.minimumInteritemSpacing = 0;
     // 初始化 collectionView
@@ -125,7 +126,7 @@ slideTabBarOnTabActionDelegate
     return _awemeList.count;
 }
 -(void)loadList {
-    for (int i = 0; i < 5; i ++) {
+    for (int i = 0; i < 15; i ++) {
         UIView *view = [UIView new];
         view.frame = CGRectMake(i * ScreenWidth / 3, i * 180, ScreenWidth / 3, 170);
         [_awemeList addObject:view];
@@ -162,13 +163,37 @@ slideTabBarOnTabActionDelegate
 }
 
 // scrollView delegate
+// 滚动结束时调用
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     // 垂直方向的 偏移值
     CGFloat offsetY = scrollView.contentOffset.y;
     // 当下拉时 偏移值为 负
     if (offsetY < 0) {
         [_userHeader overScrollAction: offsetY];
+    } else {
+        // 上推
+        [_userHeader scrollToTopAction:offsetY];
+        [self  updateNavigationTitle:offsetY];
     }
+}
+
+// 更新导航控制器样式
+-(void)updateNavigationTitle:(CGFloat)offsetY {
+    if (kUserHeaderHeight - [self navigationBarHeight] *2 >= offsetY) {
+        [self setNavigationBarTitleColor:ColorClear];
+    }
+    if (kUserHeaderHeight - [self navigationBarHeight] *2 < offsetY && offsetY < kUserHeaderHeight - [self navigationBarHeight]) {
+        CGFloat alphaRatio = 1.0f - (kUserHeaderHeight - [self navigationBarHeight] - offsetY)/[self navigationBarHeight];
+        [self setNavigationBarTitleColor:[UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:alphaRatio]];
+    }
+    if (offsetY > kUserHeaderHeight - [self navigationBarHeight]) {
+        [self setNavigationBarTitleColor:ColorWhite];
+    }
+}
+
+// 返回导航控制器的高度
+-(CGFloat) navigationBarHeight {
+    return self.navigationController.navigationBar.frame.size.height;
 }
 
 // 网络状态发生变化
@@ -214,6 +239,7 @@ slideTabBarOnTabActionDelegate
 - (void)onTabTapAction:(NSInteger)index {
     NSLog(@"index=======%ld", index);
 }
+
 /*
 #pragma mark - Navigation
 

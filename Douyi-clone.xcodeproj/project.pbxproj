@@ -25,6 +25,7 @@
 		CFC287F8219AA4D400D20362 /* UserResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC287F7219AA4D400D20362 /* UserResponse.m */; };
 		CFC287FB219AA9B000D20362 /* BaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC287FA219AA9B000D20362 /* BaseRequest.m */; };
 		CFC287FE219AA9E300D20362 /* UserRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC287FD219AA9E300D20362 /* UserRequest.m */; };
+		CFD8160421A3AC4C0098F526 /* HoverViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CFD8160321A3AC4C0098F526 /* HoverViewFlowLayout.m */; };
 		CFFC0A3A219BB67C003A7911 /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = CFFC0A39219BB67C003A7911 /* user.json */; };
 		CFFC0A3C219BB6B3003A7911 /* awemes.json in Resources */ = {isa = PBXBuildFile; fileRef = CFFC0A3B219BB6B3003A7911 /* awemes.json */; };
 		CFFC0A3E219BB6E0003A7911 /* favorites.json in Resources */ = {isa = PBXBuildFile; fileRef = CFFC0A3D219BB6E0003A7911 /* favorites.json */; };
@@ -77,6 +78,8 @@
 		CFC287FA219AA9B000D20362 /* BaseRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseRequest.m; sourceTree = "<group>"; };
 		CFC287FC219AA9E300D20362 /* UserRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserRequest.h; sourceTree = "<group>"; };
 		CFC287FD219AA9E300D20362 /* UserRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserRequest.m; sourceTree = "<group>"; };
+		CFD8160221A3AC4C0098F526 /* HoverViewFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HoverViewFlowLayout.h; sourceTree = "<group>"; };
+		CFD8160321A3AC4C0098F526 /* HoverViewFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HoverViewFlowLayout.m; sourceTree = "<group>"; };
 		CFFC0A39219BB67C003A7911 /* user.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = user.json; sourceTree = "<group>"; };
 		CFFC0A3B219BB6B3003A7911 /* awemes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = awemes.json; sourceTree = "<group>"; };
 		CFFC0A3D219BB6E0003A7911 /* favorites.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = favorites.json; sourceTree = "<group>"; };
@@ -125,6 +128,8 @@
 				CF4BFEA721994E2900760CED /* AwemeCollectionViewCell.m */,
 				CFFC0A45219E567C003A7911 /* SlideTabBar.h */,
 				CFFC0A46219E567C003A7911 /* SlideTabBar.m */,
+				CFD8160221A3AC4C0098F526 /* HoverViewFlowLayout.h */,
+				CFD8160321A3AC4C0098F526 /* HoverViewFlowLayout.m */,
 			);
 			path = UserHomePage;
 			sourceTree = "<group>";
@@ -396,6 +401,7 @@
 				CF4BFE9C219559A600760CED /* main.m in Sources */,
 				CFFC0A47219E567C003A7911 /* SlideTabBar.m in Sources */,
 				CFFC0A57219FAE5D003A7911 /* WebPImage.m in Sources */,
+				CFD8160421A3AC4C0098F526 /* HoverViewFlowLayout.m in Sources */,
 				CFC287F8219AA4D400D20362 /* UserResponse.m in Sources */,
 				0D707B462197FFE8002B04B7 /* UserHeader.m in Sources */,
 				CFC287F0219A80DF00D20362 /* User.m in Sources */,

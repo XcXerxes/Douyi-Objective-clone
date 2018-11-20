@@ -59,6 +59,7 @@
 
 - (void)setNavigationBarBackgroundColor:(UIColor *)color {
     [self.navigationController.navigationBar setBackgroundColor:color];
+    self.navigationController.navigationBar.shadowImage = [UIImage new];
 }
 
 - (void)setStatusBarStyle:(UIBarStyle)style {

@@ -69,6 +69,10 @@ NS_ASSUME_NONNULL_BEGIN
 -(void) initData:(User *)user;
 // 下拉时 调用的 事件
 -(void) overScrollAction: (CGFloat) offsetY;
+
+// 滚动到头部时调用
+-(void) scrollToTopAction: (CGFloat) offsetY;
+
 @end
 
 NS_ASSUME_NONNULL_END
